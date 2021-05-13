@@ -1,20 +1,20 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-import GetUsers from '../screens/GetUsers';
 import AddUser from '../screens/AddUser';
-
+import Home from '../screens/Home';
+import UpdateUser from '../screens/UpdateUser';
 
 function MainStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="AddUser" screenOptions={{headerShown: false}}>
-        <Stack.Screen name="GetUsers" component={GetUsers}/>
-        <Stack.Screen name="AddUser" component={AddUser}/>
-
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="AddUser" component={AddUser} />
+        <Stack.Screen name="UpdateUser" component={UpdateUser} />
       </Stack.Navigator>
     </NavigationContainer>
   );
